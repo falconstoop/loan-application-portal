@@ -1,0 +1,82 @@
+/* ========== AUTH WRAPPER ========== */
+.auth-wrapper {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  min-height: 100vh;
+}
+
+/* ========== AUTH FORM CARD ========== */
+.auth-form {
+  background-color: var(--surface);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 28rem;
+}
+
+.auth-form h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.auth-form p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form a {
+  color: var(--primary);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.auth-form a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* ========== DEMO ACCESS BOX ========== */
+.demo-access {
+  background-color: var(--warning-light);
+  border: 1px dashed var(--warning);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.demo-access p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #856404;
+  text-align: left;
+}
+
+.demo-access strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+  .auth-wrapper {
+    padding: 1rem;
+    min-height: 100dvh;
+  }
+
+  .auth-form {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .auth-form h1,
+  .auth-form h2 {
+    font-size: 1.5rem;
+  }
+}
