@@ -1,6 +1,8 @@
 //
 const root = document.getElementById("root");
 //
+import { navigateToUserDashboard } from "../user/userDashboard.js";
+//
 
 const createLogin = () => {
   root.innerHTML = "";
@@ -30,6 +32,12 @@ const createLogin = () => {
 
         </form>
     `;
+
+  wrapper.querySelector(".form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    navigateToUserDashboard();
+  });
 
   root.append(wrapper);
 };

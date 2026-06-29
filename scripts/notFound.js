@@ -5,13 +5,19 @@ const root = document.getElementById("root");
 const createNotFound = () => {
   root.innerHTML = "";
 
-  const div = document.createElement("div");
+  const wrapper = document.createElement("div");
+  wrapper.className = "flex-container";
+  wrapper.dataset.height = "full";
+  wrapper.dataset.flex = "col";
+  wrapper.dataset.gap = "lg";
 
-  div.innerHTML = `
-    <h2>Page Not Found</h2>
+  wrapper.innerHTML = `
+    <h2>404 — Page Not Found</h2>
+
+    <a href="#/auth/login" class="btn btn-primary">Back to Login</a>
   `;
 
-  root.append(div);
+  root.append(wrapper);
 };
 
 export default createNotFound;

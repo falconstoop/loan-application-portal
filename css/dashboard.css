@@ -1,0 +1,152 @@
+/* ========== HEADER ========== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 1.5rem;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.header-separator {
+  color: var(--border);
+  margin: 0 0.25rem;
+}
+
+.header-role {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-welcome {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.header-welcome strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.header-icon {
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Dark mode Toggle */
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border);
+  border-radius: 22px;
+  transition: var(--transition);
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.theme-toggle input:checked + .toggle-slider {
+  background-color: var(--primary);
+}
+
+.theme-toggle input:checked + .toggle-slider::before {
+  transform: translateX(22px);
+}
+
+/* ========== SIDEBAR ========== */
+
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1rem;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.sidebar-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.sidebar-nav a:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.sidebar-nav a.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ========== DASHBOARD ========== */
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-body {
+  display: flex;
+  flex: 1;
+}

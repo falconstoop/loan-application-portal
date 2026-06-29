@@ -36,7 +36,7 @@ const createSignup = () => {
             <a href="#/auth/login">Login</a>
           </p>
 
-          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <button type="submit" class="btn btn-primary">Create Account</button>
 
         </form>
     `;

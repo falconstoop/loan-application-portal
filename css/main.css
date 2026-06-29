@@ -217,6 +217,10 @@ body {
   cursor: pointer;
   transition: all var(--transition);
   border: none;
+  width: auto;
+}
+
+.form .btn {
   width: 100%;
 }
 
